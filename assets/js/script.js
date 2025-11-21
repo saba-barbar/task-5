@@ -150,24 +150,20 @@ remove(numbers)
 // Output: 55
 
 function missing(arr) {
-    let num = 1
-    for (let i = 0; i <= 100; i++)
-        if (arr[i] == num) {
-            num++
-            continue
-        }
-        else {
-            console.log(num)
-        }
-}
-let miss = []
-for (let j = 1; j <= 100; j++) {
-    if (j == 33) {
-        continue
+    let sum = 100 * 101 / 2
+    let actualSum = 0
+    for (let i = 0; i<arr.length; i++) {
+        actualSum += arr[i]
     }
-    miss[j - 1] = j
+    console.log(sum -actualSum)
 }
-missing(miss)
+let arr = []
+for (let i = 1; i <= 100; i++) {
+    if (i !== 55) {
+        arr[arr.length] = i
+    }
+}
+missing(arr)
 
 // 8. Capitalize the First Letter of Each Word
 // Problem: Write a function that takes a sentence and returns a new sentence with the first letter of each word capitalized.
